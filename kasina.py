@@ -92,7 +92,12 @@ if __name__ == "__main__":
             img = "https://www.kasina.co.kr" + div.find('div', class_='item_photo_box').img['src']
             if ProductID not in product_db.keys():
                 product_db[ProductID] = [brand, ProductID, price, productLink, img]
-                print("브랜드 :", brand, "제품명 :", ProductID, "가격 :", price, "제품링크 :", productLink, "제품 이미지 :", img)
+                print("새 상품이 추가 됐습니다.")
+                print("브랜드 :", brand)
+                print("제품명 :", ProductID)
+                print("가격 :", price)
+                print("제품링크 :", productLink)
+                print("제품 이미지 :", img)
         time.sleep(MONITOR_DELAY)
 
 
