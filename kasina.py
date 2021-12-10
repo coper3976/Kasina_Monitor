@@ -1,15 +1,9 @@
 from selenium import webdriver
-import sys, os
-from bs4 import BeautifulSoup, element
-import pyperclip
+from bs4 import BeautifulSoup
 import time
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
-import requests
 from bs4 import BeautifulSoup
-import time
-from pathos.multiprocessing import ProcessingPool as Pool
-from discord_hooks import Webhook
 from tqdm import tqdm
 
 options = webdriver.ChromeOptions()
@@ -80,7 +74,6 @@ if __name__ == "__main__":
             img = "https://www.kasina.co.kr" + div.find('div', class_='item_photo_box').img['src']
             if ProductID not in product_db.keys():
                 product_db[ProductID] = [brand, ProductID, price, productLink, img]
-                print("새 상품이 추가 됐습니다.")
                 print("브랜드 :", brand)
                 print("제품명 :", ProductID)
                 print("가격 :", price)
